@@ -18,7 +18,7 @@ input.onGesture(Gesture.Shake, function () {
             . # . # .
             `).showImage(-5 + i)
     }
-    basic.pause(1000)
+    basic.pause(500)
     handshape = randint(0, 2)
     if (handshape == 0) {
         basic.showString("R")
