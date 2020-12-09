@@ -2,7 +2,7 @@ let handshape = 0
 input.onGesture(Gesture.Shake, function () {
     basic.clearScreen()
     basic.pause(500)
-    for (let i = 0; i <= 10; i++) {
+    for (let i = 0; i <= 9; i++) {
         images.createImage(`
             . # . . .
             # . # . .
