@@ -1,17 +1,24 @@
 let handshape = 0
 input.onGesture(Gesture.Shake, function () {
-    basic.showLeds(`
-        # # . # #
-        # # . # #
-        . . # . .
-        # . . . #
-        . # # # .
-        `)
-    basic.pause(1000)
-    for (let i = 0; i <= 2; i++) {
-        basic.showNumber(i + 1)
-        basic.pause(1000)
+    basic.clearScreen()
+    basic.pause(500)
+    for (let i = 0; i <= 10; i++) {
+        images.createImage(`
+            . # . . .
+            # . # . .
+            . . # . .
+            . . # # #
+            . # . # .
+            `).showImage(-5 + i)
+        images.createImage(`
+            # # . . .
+            . # . . .
+            . # . . .
+            . # # # .
+            . # . # .
+            `).showImage(-5 + i)
     }
+    basic.pause(1000)
     handshape = randint(0, 2)
     if (handshape == 0) {
         basic.showString("R")
